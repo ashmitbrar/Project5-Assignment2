@@ -39,5 +39,13 @@ int main() {
     // Close the file
     file.close();
 
+    //Debug functionality : Prints student data
+#ifdef _DEBUG
+    std::cout << "Student List:" << std::endl;
+    for (const auto& student : students) {
+        std::cout << "First Name: " << student.FirstName << ", Last Name: " << student.LastName << std::endl;
+    }
+#endif
+
     return 0; // Return success
 }
